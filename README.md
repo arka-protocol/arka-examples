@@ -32,6 +32,16 @@ pnpm tsx aml-domain/scripts/run-aml-simulations.ts
 pnpm tsx loan-domain/scripts/run-loan-simulations.ts
 ```
 
+## Documentation
+
+- [Getting Started](https://www.arkaprotocol.com/docs/1.0.0/getting-started) - Quick start guide
+- [Rule Authoring](https://www.arkaprotocol.com/docs/1.0.0/rules) - How to write compliance rules
+- [Use Cases](https://www.arkaprotocol.com/use-cases) - Industry-specific use cases
+
 ## License
 
 Apache 2.0 - see [LICENSE](LICENSE) for details.
+
+---
+
+Built with ❤️ by [ARKA Protocol](https://www.arkaprotocol.com)
