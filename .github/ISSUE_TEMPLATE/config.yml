@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/arka-protocol/arka-docs
+    about: Check out our documentation for guides and API reference
+  - name: Discussions
+    url: https://github.com/arka-protocol/arka-core/discussions
+    about: Ask questions and share ideas with the community
