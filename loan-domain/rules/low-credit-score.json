@@ -1,0 +1,27 @@
+{
+  "rule": {
+    "name": "Minimum Credit Score",
+    "description": "Denies loans to borrowers with credit scores below 500",
+    "appliesToEntityType": "Loan",
+    "appliesToEventType": "LOAN_CREATED",
+    "severity": "HIGH",
+    "condition": {
+      "type": "compare",
+      "field": "borrower.creditScore",
+      "operator": "<",
+      "value": 500
+    },
+    "consequence": {
+      "decision": "DENY",
+      "code": "CREDIT_SCORE_TOO_LOW",
+      "message": "Borrower credit score is below minimum threshold of 500",
+      "remediation": "Applicant must improve credit score before reapplying"
+    },
+    "tags": ["credit", "underwriting", "risk"],
+    "metadata": {
+      "threshold": 500,
+      "category": "credit-risk"
+    },
+    "status": "ACTIVE"
+  }
+}

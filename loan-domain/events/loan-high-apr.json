@@ -1,0 +1,29 @@
+{
+  "event": {
+    "source": "arka-loans",
+    "type": "LOAN_CREATED",
+    "entityType": "Loan",
+    "jurisdiction": "US-CA",
+    "payload": {
+      "loan": {
+        "apr": 0.45,
+        "amount": 5000,
+        "termMonths": 24,
+        "purpose": "Emergency expenses"
+      },
+      "borrower": {
+        "creditScore": 580,
+        "income": 35000,
+        "employmentStatus": "PART_TIME",
+        "debtToIncomeRatio": 0.45
+      },
+      "lender": {
+        "id": "lender_002",
+        "name": "Quick Cash Lending"
+      }
+    }
+  },
+  "context": {
+    "note": "This loan should be DENIED due to APR exceeding California's 36% cap"
+  }
+}

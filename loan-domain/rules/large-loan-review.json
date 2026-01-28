@@ -1,0 +1,27 @@
+{
+  "rule": {
+    "name": "Large Loan Amount Review",
+    "description": "Requires manual review for loans exceeding $100,000",
+    "appliesToEntityType": "Loan",
+    "appliesToEventType": "LOAN_CREATED",
+    "severity": "MEDIUM",
+    "condition": {
+      "type": "compare",
+      "field": "loan.amount",
+      "operator": ">",
+      "value": 100000
+    },
+    "consequence": {
+      "decision": "FLAG",
+      "code": "LARGE_LOAN_REVIEW",
+      "message": "Loan amount exceeds $100,000 and requires additional review",
+      "remediation": "Submit for senior underwriter approval"
+    },
+    "tags": ["review", "underwriting", "amount"],
+    "metadata": {
+      "amountThreshold": 100000,
+      "escalationLevel": "senior-underwriter"
+    },
+    "status": "ACTIVE"
+  }
+}

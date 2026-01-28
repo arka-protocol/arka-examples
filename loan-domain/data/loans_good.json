@@ -1,0 +1,358 @@
+{
+  "description": "Sample loan applications that should pass compliance checks",
+  "loans": [
+    {
+      "id": "loan-good-001",
+      "jurisdiction": "US-CA",
+      "loan": {
+        "apr": 0.12,
+        "principal": 25000,
+        "termMonths": 36,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-001",
+        "creditScore": 720,
+        "income": 85000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.28,
+        "riskBand": "PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 5
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-good-002",
+      "jurisdiction": "US-NY",
+      "loan": {
+        "apr": 0.18,
+        "principal": 15000,
+        "termMonths": 24,
+        "purpose": "Auto",
+        "productType": "AUTO",
+        "isSecured": true,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-002",
+        "creditScore": 750,
+        "income": 120000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.22,
+        "riskBand": "SUPER_PRIME",
+        "region": "URBAN",
+        "state": "NY",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 5,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 12
+      },
+      "lender": {
+        "id": "lender-002",
+        "name": "Empire State Bank",
+        "licenseNumber": "NY-67890",
+        "state": "NY",
+        "isBank": true
+      }
+    },
+    {
+      "id": "loan-good-003",
+      "jurisdiction": "US-TX",
+      "loan": {
+        "apr": 0.15,
+        "principal": 50000,
+        "termMonths": 60,
+        "purpose": "Home improvement",
+        "productType": "HOME_EQUITY",
+        "isSecured": true,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-003",
+        "creditScore": 695,
+        "income": 95000,
+        "employmentStatus": "SELF_EMPLOYED",
+        "debtToIncomeRatio": 0.35,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "TX",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 8
+      },
+      "lender": {
+        "id": "lender-003",
+        "name": "Lone Star Lending",
+        "licenseNumber": "TX-11111",
+        "state": "TX",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-good-004",
+      "jurisdiction": "US-CA",
+      "loan": {
+        "apr": 0.08,
+        "principal": 35000,
+        "termMonths": 48,
+        "purpose": "Business expansion",
+        "productType": "SME",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-004",
+        "creditScore": 780,
+        "income": 150000,
+        "employmentStatus": "SELF_EMPLOYED",
+        "debtToIncomeRatio": 0.18,
+        "riskBand": "SUPER_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": true,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 15
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-good-005",
+      "jurisdiction": "US-FL",
+      "loan": {
+        "apr": 0.14,
+        "principal": 20000,
+        "termMonths": 36,
+        "purpose": "Medical",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-005",
+        "creditScore": 710,
+        "income": 72000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.30,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "FL",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 3,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 4
+      },
+      "lender": {
+        "id": "lender-004",
+        "name": "Sunshine Financial",
+        "licenseNumber": "FL-22222",
+        "state": "FL",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-good-006",
+      "jurisdiction": "US-CA",
+      "loan": {
+        "apr": 0.10,
+        "principal": 45000,
+        "termMonths": 60,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": true,
+        "originalLoanId": "loan-old-001"
+      },
+      "borrower": {
+        "borrowerId": "borrower-006",
+        "creditScore": 735,
+        "income": 98000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.25,
+        "riskBand": "PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 4,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 7
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-good-007",
+      "jurisdiction": "US-WA",
+      "loan": {
+        "apr": 0.16,
+        "principal": 18000,
+        "termMonths": 24,
+        "purpose": "Auto",
+        "productType": "AUTO",
+        "isSecured": true,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-007",
+        "creditScore": 685,
+        "income": 65000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.32,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "WA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 3
+      },
+      "lender": {
+        "id": "lender-005",
+        "name": "Evergreen Bank",
+        "licenseNumber": "WA-33333",
+        "state": "WA",
+        "isBank": true
+      }
+    },
+    {
+      "id": "loan-good-008",
+      "jurisdiction": "US-CA",
+      "loan": {
+        "apr": 0.22,
+        "principal": 8000,
+        "termMonths": 12,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-008",
+        "creditScore": 650,
+        "income": 55000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.38,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "PAST_30",
+        "delinquenciesLast24Months": 1,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-good-009",
+      "jurisdiction": "US-OR",
+      "loan": {
+        "apr": 0.11,
+        "principal": 30000,
+        "termMonths": 48,
+        "purpose": "Education",
+        "productType": "STUDENT",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-009",
+        "creditScore": 700,
+        "income": 45000,
+        "employmentStatus": "PART_TIME",
+        "debtToIncomeRatio": 0.20,
+        "riskBand": "PRIME",
+        "region": "URBAN",
+        "state": "OR",
+        "isFirstTimeBorrower": true,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 1,
+        "hasCosigner": true,
+        "cosignerCreditScore": 780
+      },
+      "lender": {
+        "id": "lender-006",
+        "name": "Northwest Education Finance",
+        "licenseNumber": "OR-44444",
+        "state": "OR",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-good-010",
+      "jurisdiction": "US-AZ",
+      "loan": {
+        "apr": 0.19,
+        "principal": 12000,
+        "termMonths": 24,
+        "purpose": "Emergency",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-010",
+        "creditScore": 675,
+        "income": 62000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.35,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "AZ",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 6
+      },
+      "lender": {
+        "id": "lender-007",
+        "name": "Desert Financial",
+        "licenseNumber": "AZ-55555",
+        "state": "AZ",
+        "isBank": false
+      }
+    }
+  ]
+}

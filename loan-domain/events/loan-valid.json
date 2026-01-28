@@ -1,0 +1,26 @@
+{
+  "event": {
+    "source": "arka-loans",
+    "type": "LOAN_CREATED",
+    "entityType": "Loan",
+    "jurisdiction": "US-CA",
+    "payload": {
+      "loan": {
+        "apr": 0.25,
+        "amount": 15000,
+        "termMonths": 36,
+        "purpose": "Debt consolidation"
+      },
+      "borrower": {
+        "creditScore": 720,
+        "income": 65000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.28
+      },
+      "lender": {
+        "id": "lender_001",
+        "name": "First National Bank"
+      }
+    }
+  }
+}

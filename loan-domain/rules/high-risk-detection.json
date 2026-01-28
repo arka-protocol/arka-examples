@@ -1,0 +1,38 @@
+{
+  "rule": {
+    "name": "High Risk Loan Detection",
+    "description": "Flags loans that combine high APR (>25%) with long terms (>48 months) as they create excessive risk for borrowers",
+    "appliesToEntityType": "Loan",
+    "appliesToEventType": "LOAN_CREATED",
+    "severity": "HIGH",
+    "condition": {
+      "type": "and",
+      "conditions": [
+        {
+          "type": "compare",
+          "field": "loan.apr",
+          "operator": ">",
+          "value": 0.25
+        },
+        {
+          "type": "compare",
+          "field": "loan.termMonths",
+          "operator": ">",
+          "value": 48
+        }
+      ]
+    },
+    "consequence": {
+      "decision": "FLAG",
+      "code": "HIGH_RISK_COMBINATION",
+      "message": "High APR combined with long term creates excessive risk for borrower",
+      "remediation": "Consider reducing APR below 25% or shortening term to 48 months or less"
+    },
+    "tags": ["risk", "monitoring", "loan-quality"],
+    "metadata": {
+      "riskCategory": "credit",
+      "reviewRequired": true
+    },
+    "status": "ACTIVE"
+  }
+}

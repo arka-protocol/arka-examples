@@ -1,0 +1,580 @@
+{
+  "description": "Loan applications with hidden risks that ARKA catches but traditional systems might miss",
+  "loans": [
+    {
+      "id": "loan-risk-001",
+      "jurisdiction": "US-CA",
+      "description": "APR exceeds California cap - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["CA_APR_EXCEEDED"],
+      "loan": {
+        "apr": 0.38,
+        "principal": 10000,
+        "termMonths": 24,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-001",
+        "creditScore": 620,
+        "income": 45000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.35,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-002",
+      "jurisdiction": "US-NY",
+      "description": "APR exceeds NY's stricter cap - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["NY_APR_EXCEEDED"],
+      "loan": {
+        "apr": 0.28,
+        "principal": 15000,
+        "termMonths": 36,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-002",
+        "creditScore": 650,
+        "income": 55000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.30,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "NY",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 3
+      },
+      "lender": {
+        "id": "lender-002",
+        "name": "Empire State Bank",
+        "licenseNumber": "NY-67890",
+        "state": "NY",
+        "isBank": true
+      }
+    },
+    {
+      "id": "loan-risk-003",
+      "jurisdiction": "US-TX",
+      "description": "APR exceeds TX cap - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["TX_APR_EXCEEDED"],
+      "loan": {
+        "apr": 0.22,
+        "principal": 8000,
+        "termMonths": 24,
+        "purpose": "Auto",
+        "productType": "AUTO",
+        "isSecured": true,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-003",
+        "creditScore": 680,
+        "income": 52000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.28,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "TX",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 4
+      },
+      "lender": {
+        "id": "lender-003",
+        "name": "Lone Star Lending",
+        "licenseNumber": "TX-11111",
+        "state": "TX",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-004",
+      "jurisdiction": "US-CA",
+      "description": "Deep subprime credit - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["DEEP_SUBPRIME_CREDIT"],
+      "loan": {
+        "apr": 0.32,
+        "principal": 5000,
+        "termMonths": 12,
+        "purpose": "Emergency",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-004",
+        "creditScore": 480,
+        "income": 35000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.40,
+        "riskBand": "DEEP_SUBPRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": true,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "PAST_90",
+        "delinquenciesLast24Months": 2,
+        "yearsEmployed": 1
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-005",
+      "jurisdiction": "US-CA",
+      "description": "Excessive DTI > 60% - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["EXCESSIVE_DTI"],
+      "loan": {
+        "apr": 0.20,
+        "principal": 25000,
+        "termMonths": 48,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-005",
+        "creditScore": 680,
+        "income": 48000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.65,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 4,
+        "delinquencyHistory": "PAST_30",
+        "delinquenciesLast24Months": 1,
+        "yearsEmployed": 3
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-006",
+      "jurisdiction": "US-CA",
+      "description": "Bankruptcy on record - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["SEVERE_DELINQUENCY_HISTORY"],
+      "loan": {
+        "apr": 0.28,
+        "principal": 10000,
+        "termMonths": 24,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-006",
+        "creditScore": 550,
+        "income": 52000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.35,
+        "riskBand": "SUBPRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "BANKRUPTCY",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-007",
+      "jurisdiction": "US-CA",
+      "description": "Charged-off loan on record - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["SEVERE_DELINQUENCY_HISTORY"],
+      "loan": {
+        "apr": 0.25,
+        "principal": 12000,
+        "termMonths": 36,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-007",
+        "creditScore": 520,
+        "income": 48000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.38,
+        "riskBand": "SUBPRIME",
+        "region": "SUBURBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "CHARGED_OFF",
+        "delinquenciesLast24Months": 1,
+        "yearsEmployed": 3
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-008",
+      "jurisdiction": "US-CA",
+      "description": "Military borrower with APR exceeding MLA cap - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["MLA_VIOLATION"],
+      "loan": {
+        "apr": 0.38,
+        "principal": 8000,
+        "termMonths": 24,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-008",
+        "creditScore": 650,
+        "income": 45000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.30,
+        "riskBand": "NEAR_PRIME",
+        "region": "SUBURBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 4
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      },
+      "flags": {
+        "isMilitary": true
+      }
+    },
+    {
+      "id": "loan-risk-009",
+      "jurisdiction": "US-CA",
+      "description": "Unemployed borrower without co-signer - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["UNEMPLOYED_NO_COSIGNER"],
+      "loan": {
+        "apr": 0.22,
+        "principal": 10000,
+        "termMonths": 24,
+        "purpose": "Emergency",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-009",
+        "creditScore": 680,
+        "income": 0,
+        "employmentStatus": "UNEMPLOYED",
+        "debtToIncomeRatio": 0.00,
+        "riskBand": "PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 0,
+        "hasCosigner": false
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-010",
+      "jurisdiction": "US-CA",
+      "description": "Payday loan to subprime borrower - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["PAYDAY_SUBPRIME_DENIAL"],
+      "loan": {
+        "apr": 0.35,
+        "principal": 500,
+        "termMonths": 1,
+        "purpose": "Emergency",
+        "productType": "PAYDAY",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-010",
+        "creditScore": 520,
+        "income": 28000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.45,
+        "riskBand": "SUBPRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": true,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "PAST_60",
+        "delinquenciesLast24Months": 2,
+        "yearsEmployed": 1
+      },
+      "lender": {
+        "id": "lender-008",
+        "name": "Quick Cash Loans",
+        "licenseNumber": "CA-99999",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-011",
+      "jurisdiction": "US-CT",
+      "description": "APR exceeds Connecticut's very strict 12% cap - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["CT_APR_EXCEEDED"],
+      "loan": {
+        "apr": 0.15,
+        "principal": 20000,
+        "termMonths": 36,
+        "purpose": "Auto",
+        "productType": "AUTO",
+        "isSecured": true,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-011",
+        "creditScore": 720,
+        "income": 75000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.28,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "CT",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 3,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 8
+      },
+      "lender": {
+        "id": "lender-009",
+        "name": "Constitution State Bank",
+        "licenseNumber": "CT-11111",
+        "state": "CT",
+        "isBank": true
+      }
+    },
+    {
+      "id": "loan-risk-012",
+      "jurisdiction": "US-AR",
+      "description": "APR exceeds Arkansas constitutional 17% cap - WILL BE DENIED",
+      "expectedOutcome": "DENY",
+      "riskIndicators": ["AR_APR_EXCEEDED"],
+      "loan": {
+        "apr": 0.20,
+        "principal": 12000,
+        "termMonths": 24,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-012",
+        "creditScore": 690,
+        "income": 58000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.32,
+        "riskBand": "PRIME",
+        "region": "RURAL",
+        "state": "AR",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 5
+      },
+      "lender": {
+        "id": "lender-010",
+        "name": "Natural State Finance",
+        "licenseNumber": "AR-22222",
+        "state": "AR",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-013",
+      "jurisdiction": "US-CA",
+      "description": "Multiple severe risk factors combined - subprime + high APR + long term + high DTI",
+      "expectedOutcome": "FLAG",
+      "riskIndicators": ["SUBPRIME_CREDIT", "HIGH_RISK_COMBINATION", "HIGH_DTI", "PREDATORY_PATTERN"],
+      "loan": {
+        "apr": 0.32,
+        "principal": 18000,
+        "termMonths": 60,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-013",
+        "creditScore": 560,
+        "income": 42000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.52,
+        "riskBand": "SUBPRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 3,
+        "delinquencyHistory": "PAST_60",
+        "delinquenciesLast24Months": 2,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-014",
+      "jurisdiction": "US-CA",
+      "description": "Same loan in CA passes but crosses line - jurisdiction arbitrage detection",
+      "expectedOutcome": "FLAG",
+      "riskIndicators": ["SHADOW_APR_RISK"],
+      "note": "This loan at 35% APR would be DENIED in NY (25% cap) or TX (18% cap) but passes in CA (36% cap) - potential jurisdiction arbitrage",
+      "loan": {
+        "apr": 0.35,
+        "principal": 15000,
+        "termMonths": 36,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-014",
+        "creditScore": 620,
+        "income": 48000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.38,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "PAST_30",
+        "delinquenciesLast24Months": 1,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-risk-015",
+      "jurisdiction": "US-CA",
+      "description": "Multiple delinquencies pattern - repeat offender behavior",
+      "expectedOutcome": "FLAG",
+      "riskIndicators": ["MULTIPLE_DELINQUENCIES", "RECENT_DELINQUENCY"],
+      "loan": {
+        "apr": 0.28,
+        "principal": 8000,
+        "termMonths": 24,
+        "purpose": "Emergency",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-risk-015",
+        "creditScore": 580,
+        "income": 42000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.40,
+        "riskBand": "NEAR_PRIME",
+        "region": "SUBURBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 4,
+        "delinquencyHistory": "PAST_90",
+        "delinquenciesLast24Months": 4,
+        "yearsEmployed": 3
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "rule": {
+    "name": "California APR Cap",
+    "description": "Enforces the California maximum APR cap of 36% for consumer loans under California Civil Code Section 1916-1",
+    "appliesToEntityType": "Loan",
+    "appliesToEventType": "LOAN_CREATED",
+    "jurisdiction": "US-CA",
+    "severity": "CRITICAL",
+    "condition": {
+      "type": "compare",
+      "field": "loan.apr",
+      "operator": ">",
+      "value": 0.36
+    },
+    "consequence": {
+      "decision": "DENY",
+      "code": "CA_APR_EXCEEDED",
+      "message": "Loan APR exceeds California maximum of 36%",
+      "remediation": "Reduce the APR to 36% or below to comply with California law"
+    },
+    "tags": ["compliance", "california", "apr", "consumer-protection"],
+    "metadata": {
+      "legalReference": "California Civil Code Section 1916-1",
+      "effectiveDate": "2020-01-01"
+    },
+    "status": "ACTIVE"
+  }
+}

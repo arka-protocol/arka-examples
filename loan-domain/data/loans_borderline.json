@@ -1,0 +1,367 @@
+{
+  "description": "Borderline loan applications that will trigger FLAGS but not outright denials - these are cases legacy systems might miss",
+  "loans": [
+    {
+      "id": "loan-border-001",
+      "jurisdiction": "US-CA",
+      "description": "Shadow APR risk - APR just under CA cap",
+      "loan": {
+        "apr": 0.34,
+        "principal": 15000,
+        "termMonths": 36,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-001",
+        "creditScore": 640,
+        "income": 52000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.38,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-002",
+      "jurisdiction": "US-CA",
+      "description": "Shadow DTI risk - DTI just under QM threshold",
+      "loan": {
+        "apr": 0.18,
+        "principal": 35000,
+        "termMonths": 60,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-002",
+        "creditScore": 710,
+        "income": 78000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.42,
+        "riskBand": "PRIME",
+        "region": "SUBURBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 4
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-003",
+      "jurisdiction": "US-CA",
+      "description": "Shadow credit risk - credit just above subprime cutoff",
+      "loan": {
+        "apr": 0.25,
+        "principal": 12000,
+        "termMonths": 24,
+        "purpose": "Medical",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-003",
+        "creditScore": 585,
+        "income": 48000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.35,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": true,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 1
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-004",
+      "jurisdiction": "US-CA",
+      "description": "First-time borrower with lower credit requesting large loan",
+      "loan": {
+        "apr": 0.20,
+        "principal": 55000,
+        "termMonths": 48,
+        "purpose": "Business expansion",
+        "productType": "SME",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-004",
+        "creditScore": 625,
+        "income": 95000,
+        "employmentStatus": "SELF_EMPLOYED",
+        "debtToIncomeRatio": 0.30,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": true,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 3
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-005",
+      "jurisdiction": "US-CA",
+      "description": "High-risk combination - elevated APR + long term + near-prime",
+      "loan": {
+        "apr": 0.28,
+        "principal": 20000,
+        "termMonths": 60,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-005",
+        "creditScore": 610,
+        "income": 55000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.40,
+        "riskBand": "NEAR_PRIME",
+        "region": "SUBURBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 2,
+        "delinquencyHistory": "PAST_30",
+        "delinquenciesLast24Months": 1,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-006",
+      "jurisdiction": "US-CA",
+      "description": "Potential predatory pattern - high APR + unsecured + high DTI",
+      "loan": {
+        "apr": 0.30,
+        "principal": 10000,
+        "termMonths": 36,
+        "purpose": "Personal",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-006",
+        "creditScore": 630,
+        "income": 42000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.48,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 3
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-007",
+      "jurisdiction": "US-NY",
+      "description": "APR just under NY's stricter cap",
+      "loan": {
+        "apr": 0.24,
+        "principal": 18000,
+        "termMonths": 36,
+        "purpose": "Auto",
+        "productType": "AUTO",
+        "isSecured": true,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-007",
+        "creditScore": 665,
+        "income": 62000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.35,
+        "riskBand": "NEAR_PRIME",
+        "region": "URBAN",
+        "state": "NY",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 1,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 4
+      },
+      "lender": {
+        "id": "lender-002",
+        "name": "Empire State Bank",
+        "licenseNumber": "NY-67890",
+        "state": "NY",
+        "isBank": true
+      }
+    },
+    {
+      "id": "loan-border-008",
+      "jurisdiction": "US-CA",
+      "description": "Near-prime with multiple flags - 2 delinquencies, high DTI",
+      "loan": {
+        "apr": 0.26,
+        "principal": 15000,
+        "termMonths": 36,
+        "purpose": "Debt consolidation",
+        "productType": "PERSONAL",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-008",
+        "creditScore": 620,
+        "income": 50000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.44,
+        "riskBand": "NEAR_PRIME",
+        "region": "SUBURBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 3,
+        "delinquencyHistory": "PAST_60",
+        "delinquenciesLast24Months": 2,
+        "yearsEmployed": 2
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-009",
+      "jurisdiction": "US-CA",
+      "description": "Large loan requiring manual review",
+      "loan": {
+        "apr": 0.12,
+        "principal": 125000,
+        "termMonths": 84,
+        "purpose": "Home improvement",
+        "productType": "HOME_EQUITY",
+        "isSecured": true,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-009",
+        "creditScore": 720,
+        "income": 145000,
+        "employmentStatus": "EMPLOYED",
+        "debtToIncomeRatio": 0.32,
+        "riskBand": "PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": false,
+        "previousLoanCount": 4,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 10
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    },
+    {
+      "id": "loan-border-010",
+      "jurisdiction": "US-CA",
+      "description": "Student borrower with income verification flag",
+      "loan": {
+        "apr": 0.15,
+        "principal": 20000,
+        "termMonths": 48,
+        "purpose": "Education",
+        "productType": "STUDENT",
+        "isSecured": false,
+        "isRefinance": false
+      },
+      "borrower": {
+        "borrowerId": "borrower-border-010",
+        "creditScore": 680,
+        "income": 25000,
+        "employmentStatus": "STUDENT",
+        "debtToIncomeRatio": 0.25,
+        "riskBand": "PRIME",
+        "region": "URBAN",
+        "state": "CA",
+        "isFirstTimeBorrower": true,
+        "previousLoanCount": 0,
+        "delinquencyHistory": "NEVER",
+        "delinquenciesLast24Months": 0,
+        "yearsEmployed": 0,
+        "hasCosigner": true,
+        "cosignerCreditScore": 740
+      },
+      "lender": {
+        "id": "lender-001",
+        "name": "Pacific Credit Union",
+        "licenseNumber": "CA-12345",
+        "state": "CA",
+        "isBank": false
+      }
+    }
+  ]
+}

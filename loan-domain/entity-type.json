@@ -1,0 +1,50 @@
+{
+  "entityType": {
+    "name": "Loan",
+    "description": "Consumer or business loan entity",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "apr": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Annual Percentage Rate as decimal (0.25 = 25%)"
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Loan amount in dollars"
+        },
+        "termMonths": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Loan term in months"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["PENDING", "APPROVED", "FUNDED", "CLOSED", "DEFAULTED"],
+          "description": "Current status of the loan"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Purpose of the loan"
+        },
+        "collateral": {
+          "type": "boolean",
+          "description": "Whether the loan is secured with collateral"
+        },
+        "borrowerId": {
+          "type": "string",
+          "description": "ID of the borrower"
+        }
+      },
+      "required": ["apr", "amount", "termMonths", "status"]
+    },
+    "metadata": {
+      "category": "financial",
+      "version": "1.0",
+      "domain": "arka-loans"
+    }
+  }
+}

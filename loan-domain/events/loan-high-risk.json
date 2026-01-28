@@ -1,0 +1,29 @@
+{
+  "event": {
+    "source": "arka-loans",
+    "type": "LOAN_CREATED",
+    "entityType": "Loan",
+    "jurisdiction": "US-CA",
+    "payload": {
+      "loan": {
+        "apr": 0.30,
+        "amount": 50000,
+        "termMonths": 60,
+        "purpose": "Business expansion"
+      },
+      "borrower": {
+        "creditScore": 650,
+        "income": 75000,
+        "employmentStatus": "SELF_EMPLOYED",
+        "debtToIncomeRatio": 0.35
+      },
+      "lender": {
+        "id": "lender_003",
+        "name": "Business Growth Capital"
+      }
+    }
+  },
+  "context": {
+    "note": "This loan should be ALLOW_WITH_FLAGS due to high APR + long term combination"
+  }
+}
